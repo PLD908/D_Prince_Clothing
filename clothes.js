@@ -1,4 +1,4 @@
-fetch("https://api.escuelajs.co/api/v1/products")
+fetch("https://fakestoreapi.com/products")
     .then((response) => {
         if (response.ok) {
             let res = response.json();
@@ -9,7 +9,6 @@ fetch("https://api.escuelajs.co/api/v1/products")
         }
     })
     .then((data) => {
-        console.log(data);
         displayClothes(data);
     })
     .catch((error) => console.error("FETCH ERROR:", error));
@@ -17,15 +16,14 @@ fetch("https://api.escuelajs.co/api/v1/products")
 function displayClothes(data) {
     const randomNumber = Math.floor(Math.random() * 10);
     const clothe = data[randomNumber];
-    const clotheDiv = document.getElementById('container');
     const aboutClothe = document.getElementById('about-cloth');
     const clotheImage = document.getElementById('item-image');
 
     // add image of product
     const clotheImg = document.createElement('img');
-    clotheImg.src = clothe.images[0];
+    clotheImg.src = clothe.image;
     clotheImage.appendChild(clotheImg);
-    console.log(clotheImage);
+    console.log(clotheImg);
     // document.body.style.backgroundImage = "url('" + clothe.images[0] + "')";
 
     // add name the clothe
@@ -47,7 +45,8 @@ function displayClothes(data) {
     aboutClothe.appendChild(paragraph);
 
     // add button
-    // const button = document.createElement('button');
-    // button.
-    // aboutClothe.appendChild(button);
+    const button = document.createElement('button');
+    button.type = "button";
+    button.textContent = "Add To Cart";
+    aboutClothe.appendChild(button);
 }
