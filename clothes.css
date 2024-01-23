@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+#container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.8em;
+    width: 45%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 3.5em;
+}
+img{
+    height: 100%;
+    width: 50%;
+}
+button{
+    border: none;
+    border-radius: 0.7em;
+    margin-top: 8em;
+    background-color: black;
+    color: white;
+    width: 40%;
+    padding: 0.8em;
+    cursor: pointer;
+}
