@@ -23,8 +23,6 @@ function displayClothes(data) {
     const clotheImg = document.createElement('img');
     clotheImg.src = clothe.image;
     clotheImage.appendChild(clotheImg);
-    console.log(clotheImg);
-    // document.body.style.backgroundImage = "url('" + clothe.images[0] + "')";
 
     // add name the clothe
     const clotheName = clothe.title;
@@ -35,7 +33,7 @@ function displayClothes(data) {
     // add price of the clothe
     const clothePrice = clothe.price;
     const headingPrice = document.createElement('h3');
-    headingPrice.innerHTML = clothePrice;
+    headingPrice.innerHTML = "$" + clothePrice;
     aboutClothe.appendChild(headingPrice);
 
     // add about of the clothe
